@@ -11,9 +11,19 @@ import XCTest
 
 class zaidFarouqiTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    var ZaidFarouqi: zaidFarouqi!
+
+      override func setUp() {
+          ZaidFarouqi = zaidFarouqi()
+      }
+
+       func testAdd() {
+             XCTAssertEqual(ZaidFarouqi.add(a: 1, b: 1), 2)
+         }
+         
+         func testSub() {
+             XCTAssertEqual(ZaidFarouqi.sub(a: 2, b: 1), 1)
+         }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
